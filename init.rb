@@ -1,10 +1,11 @@
 require 'redmine'
 
 Redmine::Plugin.register :redmine_news_macros do
-  name 'Redmine News Macros plugin'
-  author 'Author name'
-  description 'This is a plugin for Redmine'
-  version '0.0.1'
-  url 'http://example.com/path/to/plugin'
-  author_url 'http://example.com/about'
+  name 'News Macros'
+  author 'Eric Davis'
+  url 'https://projects.littlestreamsoftware.com/projects/redmine-misc'
+  author_url 'http://www.littlestreamsoftware.com'
+  description 'This plugin adds wiki macros for News items'
+  version '0.1.0'
 end
+
