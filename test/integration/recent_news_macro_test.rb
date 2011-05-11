@@ -21,7 +21,7 @@ class RecentNewsMacroTest < ActionController::IntegrationTest
       click_link 'Wiki'
       assert_response :success
 
-      fill_in 'content[text]', :with => "{{recent_news}}"
+      fill_in 'content[text]', :with => "{% recent_news %}"
       click_button 'Save'
       assert_response :success
       click_link 'Sign out'
@@ -40,7 +40,7 @@ class RecentNewsMacroTest < ActionController::IntegrationTest
       assert has_content?('Second')
       assert has_no_content?('Third') # other project
       assert has_content?('Fourth')
-      assert has_no_content?('{{recent_news')
+      assert has_no_content?('{% recent_news')
     end
     
   end
@@ -53,7 +53,7 @@ class RecentNewsMacroTest < ActionController::IntegrationTest
       click_link 'Wiki'
       assert_response :success
 
-      fill_in 'content[text]', :with => "{{recent_news}}"
+      fill_in 'content[text]', :with => "{% recent_news %}"
       click_button 'Save'
       assert_response :success
 
@@ -64,7 +64,7 @@ class RecentNewsMacroTest < ActionController::IntegrationTest
       assert has_content?('Second')
       assert has_content?('Third')
       assert has_content?('Fourth')
-      assert has_no_content?('{{recent_news')
+      assert has_no_content?('{% recent_news')
       
     end
     
